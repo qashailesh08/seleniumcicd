@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [vTiger Automation Testing]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="admin"/>
+  <parameter name="username" value="admin"/>
+  <test thread-count="5" name="Marketing Campaings(failed)">
+    <parameter name="browser" value="edgebrowser"/>
+    <parameter name="colortheme" value="alphagrey"/>
+    <classes>
+      <class name="com.eva.marketing.submodule.testcases.Marketing_Campaings">
+        <methods>
+          <include name="beforeSuiteMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClassMethod"/>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeTestMethod"/>
+          <include name="verifyCreateNewCampaings"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.eva.marketing.submodule.testcases.Marketing_Campaings -->
+    </classes>
+  </test> <!-- Marketing Campaings(failed) -->
+  <test thread-count="5" name="Marketing Leads(failed)">
+    <parameter name="browser" value="edgebrowser"/>
+    <parameter name="colortheme" value="bluelagoon"/>
+    <classes>
+      <class name="com.eva.marketing.submodule.testcases.MarketingLeads">
+        <methods>
+          <include name="beforeSuiteMethod"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeClassMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeTestMethod"/>
+          <include name="verifyCreateLeads"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.eva.marketing.submodule.testcases.MarketingLeads -->
+    </classes>
+  </test> <!-- Marketing Leads(failed) -->
+</suite> <!-- Failed suite [vTiger Automation Testing] -->
