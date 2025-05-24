@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-27T07:26:43 IST" name="vTiger Automation Testing" finished-at="2025-04-27T07:30:09 IST" duration-ms="206655">
+  <suite started-at="2025-05-24T07:30:02 IST" name="vTiger Automation Testing" finished-at="2025-05-24T07:33:23 IST" duration-ms="200899">
     <groups>
     </groups>
-    <test started-at="2025-04-27T07:26:43 IST" name="Marketing Accounts" finished-at="2025-04-27T07:28:13 IST" duration-ms="89973">
+    <test started-at="2025-05-24T07:30:02 IST" name="Marketing Accounts" finished-at="2025-05-24T07:31:32 IST" duration-ms="90125">
       <class name="com.eva.marketing.submodule.testcases.MarketingAccounts">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:26:43 IST" name="beforeTestMethod" finished-at="2025-04-27T07:26:43 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:30:02 IST" name="beforeTestMethod" finished-at="2025-05-24T07:30:02 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:26:43 IST" name="beforeClassMethod" finished-at="2025-04-27T07:26:43 IST" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:30:02 IST" name="beforeClassMethod" finished-at="2025-05-24T07:30:02 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:26:43 IST" name="beforeMethod" finished-at="2025-04-27T07:27:45 IST" duration-ms="62062" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:30:02 IST" name="beforeMethod" finished-at="2025-05-24T07:31:05 IST" duration-ms="62636" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,35 +46,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyCreateNewAccount()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:27:45 IST" name="verifyCreateNewAccount" finished-at="2025-04-27T07:28:09 IST" duration-ms="24226" status="PASS">
+        <test-method signature="verifyCreateNewAccount()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:31:05 IST" name="verifyCreateNewAccount" finished-at="2025-05-24T07:31:29 IST" duration-ms="24497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCreateNewAccount -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:28:09 IST" name="afterMethod" finished-at="2025-04-27T07:28:12 IST" duration-ms="3127" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:31:29 IST" name="afterMethod" finished-at="2025-05-24T07:31:31 IST" duration-ms="2451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:28:12 IST" name="afterClass" finished-at="2025-04-27T07:28:13 IST" duration-ms="508" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:31:31 IST" name="afterClass" finished-at="2025-05-24T07:31:32 IST" duration-ms="497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-04-27T07:28:13 IST" name="afterTest" finished-at="2025-04-27T07:28:13 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingAccounts@233795b6]" started-at="2025-05-24T07:31:32 IST" name="afterTest" finished-at="2025-05-24T07:31:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.eva.marketing.submodule.testcases.MarketingAccounts -->
     </test> <!-- Marketing Accounts -->
-    <test started-at="2025-04-27T07:28:13 IST" name="Marketing Campaings" finished-at="2025-04-27T07:29:09 IST" duration-ms="56524">
+    <test started-at="2025-05-24T07:31:32 IST" name="Marketing Campaings" finished-at="2025-05-24T07:32:26 IST" duration-ms="53643">
       <class name="com.eva.marketing.submodule.testcases.Marketing_Campaings">
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:28:13 IST" name="beforeTestMethod" finished-at="2025-04-27T07:28:13 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:31:32 IST" name="beforeTestMethod" finished-at="2025-05-24T07:31:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:28:13 IST" name="beforeClassMethod" finished-at="2025-04-27T07:28:13 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:31:32 IST" name="beforeClassMethod" finished-at="2025-05-24T07:31:32 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:28:13 IST" name="beforeMethod" finished-at="2025-04-27T07:29:00 IST" duration-ms="47278" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:31:32 IST" name="beforeMethod" finished-at="2025-05-24T07:32:16 IST" duration-ms="44398" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,39 +105,39 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyCreateNewCampaings()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:29:00 IST" name="verifyCreateNewCampaings" finished-at="2025-04-27T07:29:07 IST" duration-ms="6405" status="PASS">
+        <test-method signature="verifyCreateNewCampaings()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:32:16 IST" name="verifyCreateNewCampaings" finished-at="2025-05-24T07:32:23 IST" duration-ms="6865" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCreateNewCampaings -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:29:07 IST" name="afterMethod" finished-at="2025-04-27T07:29:09 IST" duration-ms="2774" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:32:23 IST" name="afterMethod" finished-at="2025-05-24T07:32:26 IST" duration-ms="2324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:29:09 IST" name="afterClass" finished-at="2025-04-27T07:29:09 IST" duration-ms="55" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:32:26 IST" name="afterClass" finished-at="2025-05-24T07:32:26 IST" duration-ms="48" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-04-27T07:29:09 IST" name="afterTest" finished-at="2025-04-27T07:29:09 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.Marketing_Campaings@7d20d0b]" started-at="2025-05-24T07:32:26 IST" name="afterTest" finished-at="2025-05-24T07:32:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- com.eva.marketing.submodule.testcases.Marketing_Campaings -->
     </test> <!-- Marketing Campaings -->
-    <test started-at="2025-04-27T07:29:09 IST" name="Marketing Leads" finished-at="2025-04-27T07:30:09 IST" duration-ms="60075">
+    <test started-at="2025-05-24T07:32:26 IST" name="Marketing Leads" finished-at="2025-05-24T07:33:23 IST" duration-ms="57062">
       <class name="com.eva.marketing.submodule.testcases.MarketingLeads">
-        <test-method is-config="true" signature="beforeSuiteMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:26:42 IST" name="beforeSuiteMethod" finished-at="2025-04-27T07:26:43 IST" duration-ms="359" status="PASS">
+        <test-method is-config="true" signature="beforeSuiteMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:30:01 IST" name="beforeSuiteMethod" finished-at="2025-05-24T07:30:02 IST" duration-ms="493" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteMethod -->
-        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:29:09 IST" name="beforeTestMethod" finished-at="2025-04-27T07:29:09 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeTestMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:32:26 IST" name="beforeTestMethod" finished-at="2025-05-24T07:32:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:29:09 IST" name="beforeClassMethod" finished-at="2025-04-27T07:29:09 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeClassMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:32:26 IST" name="beforeClassMethod" finished-at="2025-05-24T07:32:26 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClassMethod -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:29:09 IST" name="beforeMethod" finished-at="2025-04-27T07:29:57 IST" duration-ms="47350" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:32:26 IST" name="beforeMethod" finished-at="2025-05-24T07:33:10 IST" duration-ms="44154" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -168,23 +168,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="verifyCreateLeads()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:29:57 IST" name="verifyCreateLeads" finished-at="2025-04-27T07:30:07 IST" duration-ms="10000" status="PASS">
+        <test-method signature="verifyCreateLeads()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:33:10 IST" name="verifyCreateLeads" finished-at="2025-05-24T07:33:20 IST" duration-ms="10464" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCreateLeads -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:30:07 IST" name="afterMethod" finished-at="2025-04-27T07:30:09 IST" duration-ms="2666" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:33:20 IST" name="afterMethod" finished-at="2025-05-24T07:33:23 IST" duration-ms="2380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:30:09 IST" name="afterClass" finished-at="2025-04-27T07:30:09 IST" duration-ms="48" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:33:23 IST" name="afterClass" finished-at="2025-05-24T07:33:23 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:30:09 IST" name="afterTest" finished-at="2025-04-27T07:30:09 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:33:23 IST" name="afterTest" finished-at="2025-05-24T07:33:23 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-04-27T07:30:09 IST" name="afterSuite" finished-at="2025-04-27T07:30:09 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.eva.marketing.submodule.testcases.MarketingLeads@6c40365c]" started-at="2025-05-24T07:33:23 IST" name="afterSuite" finished-at="2025-05-24T07:33:23 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
