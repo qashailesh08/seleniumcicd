@@ -2,6 +2,7 @@ package com.eva.marketing.sub_module.reusable.code;
 
 import com.eva.webutil.WebUtil;
 
+
 public class AccountsDetailesPage extends AccountsDetailesOR {
 	private WebUtil util;
 

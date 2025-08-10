@@ -3,9 +3,7 @@ package com.eva.marketing.sub_module.reusable.code;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import com.eva.webutil.WebUtil;
-
 import lombok.Getter;
 
 @Getter
