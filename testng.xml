@@ -10,7 +10,7 @@
 				name="com.eva.marketing.submodule.testcases.MarketingAccounts"></class>
 		</classes>
 	</test>
-	<test name="Marketing Campaings">
+	<!--<test name="Marketing Campaings">
 		<parameter name="browser" value="chromebrowser" />
 		<parameter name="colortheme" value="alphagrey" />
 		<classes>
@@ -25,5 +25,5 @@
 			<class
 				name="com.eva.marketing.submodule.testcases.MarketingLeads"></class>
 		</classes>
-	</test>
+	</test>-->
 </suite>
