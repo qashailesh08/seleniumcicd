@@ -1,0 +1,3 @@
+browser=chrome
+url=https://aws.amazon.com/quick/flows/
+timeout=10

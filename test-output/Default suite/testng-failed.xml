@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.evs.actions.practice.ActionsMethods">
+      <class name="heruko.HerukoScripts">
         <methods>
-          <include name="moveElement"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="setUp"/>
+          <include name="test_001_create_account"/>
+          <include name="tearDown"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
         </methods>
-      </class> <!-- com.evs.actions.practice.ActionsMethods -->
+      </class> <!-- heruko.HerukoScripts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

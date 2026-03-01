@@ -1,29 +1,10 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="vTiger Automation Testing" >
-	<parameter name="username" value="admin"></parameter>
-	<parameter name="password" value="admin"></parameter>
-	<test name="Marketing Accounts">
-		<parameter name="browser" value="chromebrowser" />
-		<parameter name="colortheme" value="woodspice" />
-		<classes>
-			<class
-				name="com.eva.marketing.submodule.testcases.MarketingAccounts"></class>
-		</classes>
-	</test>
-	<!--<test name="Marketing Campaings">
-		<parameter name="browser" value="chromebrowser" />
-		<parameter name="colortheme" value="alphagrey" />
-		<classes>
-			<class
-				name="com.eva.marketing.submodule.testcases.Marketing_Campaings"></class>
-		</classes>
-	</test>
-	<test name="Marketing Leads">
-		<parameter name="browser" value="chromebrowser" />
-		<parameter name="colortheme" value="bluelagoon" />
-		<classes>
-			<class
-				name="com.eva.marketing.submodule.testcases.MarketingLeads"></class>
-		</classes>
-	</test>-->
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Heruko Suite">
+
+    <test name="Heruko Test">
+        <classes>
+            <class name="heruko.HerukoScripts"/>
+        </classes>
+    </test>
+
 </suite>

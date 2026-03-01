@@ -3,7 +3,7 @@ package com.eva.myhomepage.reuseable.code;
 import com.eva.webutil.WebUtil;
 
 public class CalendarLandingPage extends CalendarLandingOR {
-	private WebUtil util = WebUtil.getInstance();
+	private WebUtil util;
 
 	public CalendarLandingPage(WebUtil util) {
 		super(util);

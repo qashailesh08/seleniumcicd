@@ -5,10 +5,11 @@ import org.testng.annotations.Test;
 import com.eva.marketing.sub_module.reusable.code.AccountsDetailesPage;
 import com.eva.marketing.sub_module.reusable.code.Campaign_Detailes_Page;
 import com.eva.marketing.sub_module.reusable.code.Leads_Detailes_Page;
-import com.eva.testng.listner.RetryFailedTestCases;
 import com.eva.webutil.BaseTest;
 import com.eva.webutil.WebUtil;
 import com.evs.app.reausablecode.VtigercommonCode;
+
+import listeners.RetryFailedTestCases;
 
 public class MarketingAccounts extends BaseTest {
 
@@ -63,7 +64,7 @@ public class MarketingAccounts extends BaseTest {
 
 //	@Test(priority = 1)
 	public void verifyAccountDelete() {
-		WebUtil util = WebUtil.getInstance();
+
 		VtigercommonCode vtObj = new VtigercommonCode(util);
 		vtObj.mouseOverOnMarketing();
 		vtObj.gotoMarkAccount();

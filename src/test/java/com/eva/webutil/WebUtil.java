@@ -37,23 +37,25 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.google.common.io.Files;
 
 public class WebUtil {
-	public WebDriver driver = null;
 	private static ExtentReports exReportObj;
 	private ExtentTest exTestObj = null;
-	private static WebUtil utilObj = null;
+//	private static WebUtil utilObj = null;
 	private Actions actObj = null;
-
+	private WebDriver driver;
 	private static Select sel;
-	private static ThreadLocal<WebDriver> poolDriver = new ThreadLocal<>();
+//	private static ThreadLocal<WebDriver> poolDriver = new ThreadLocal<>();
 
-	public WebDriver getDriver() {
-		driver = poolDriver.get();
-		return driver;
-	}
-
-	public static void setDriver(WebDriver driver) {
-		poolDriver.set(driver);
-	}
+//	public WebDriver driver {
+//		driver = ;
+//		return driver;
+//	}
+//	public WebDriver driver {
+//		return ;
+//	}
+//
+//	public static void setDriver(WebDriver driver) {
+//		poolDriver.set(driver);
+//	}
 
 //	public static void removeTL() {
 //		poolDriver.remove();
@@ -68,9 +70,17 @@ public class WebUtil {
 	 * 
 	 * @return: constructor having no any return type even void
 	 */
-	private WebUtil() {
-
+//	private WebUtil() {
+//
+//	}
+	public WebDriver getDriver() {
+		return this.driver;
 	}
+
+	public WebUtil(WebDriver driver) {
+		this.driver = driver;
+	}
+
 	/*
 	 * By this method we are getting WebUtility class object .
 	 * 
@@ -79,13 +89,13 @@ public class WebUtil {
 	 * @return: WebUtility
 	 */
 
-	public static WebUtil getInstance() {
-		if (utilObj == null) {
-			utilObj = new WebUtil();
-		}
-
-		return utilObj;
-	}
+//	public static WebUtil getInstance() {
+//		if (utilObj == null) {
+//			utilObj = new WebUtil();
+//		}
+//
+//		return utilObj;
+//	}
 
 	/*
 	 * By this method we can implements Scenario name and we can also create a new
@@ -95,7 +105,7 @@ public class WebUtil {
 	 * 
 	 * @return: no return type
 	 */
-	public synchronized static void generateReport() {
+	public synchronized static void generateReport(String webName) {
 //		if (exReportObj == null) {
 		exReportObj = new ExtentReports();
 //		}
@@ -105,7 +115,7 @@ public class WebUtil {
 		}
 		DateFormat dfObj = new SimpleDateFormat("dd-MM-yyyy{hh.mm.ss a}");
 		String timeStamp = dfObj.format(new Date());
-		ExtentSparkReporter sparkReport = new ExtentSparkReporter("Reports\\" + "VtigerCRM.html" + "," + timeStamp);
+		ExtentSparkReporter sparkReport = new ExtentSparkReporter("Reports\\" + webName + ".html" + "," + timeStamp);
 		exReportObj.attachReporter(sparkReport);
 		sparkReport.config().setTheme(Theme.DARK);
 
@@ -118,9 +128,9 @@ public class WebUtil {
 		return exTestObj;
 	}
 
-	public void createReport(String testCaseName) {
+	public void createReport(String testCaseName, String webName) {
 		if (exReportObj == null) {
-			generateReport();
+			generateReport(webName);
 		}
 
 //		if (exTestObj == null) {
@@ -139,31 +149,66 @@ public class WebUtil {
 	 * 
 	 * @ return: no return type
 	 */
+//	public void launchBrowser(String browserName) {
+//		try {
+//			switch (browserName) {
+//			case "chromebrowser":
+//				WebDriver driver = new ChromeDriver();
+//				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
+//				break;
+//			case "firebrowser":
+//				poolDriver.set(new FirefoxDriver());
+//				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
+//				break;
+//			case "edgebrowser":
+//				poolDriver.set(new EdgeDriver());
+//				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
+//				break;
+//			case "safaribrowser":
+//				poolDriver.set(new SafariDriver());
+//				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
+//
+//			}
+//		} catch (Exception e) {
+//			getExtentTest().log(Status.FAIL, "Failed To Launched Browser");
+//			throw e;
+//		}
+//
+//	}
 	public void launchBrowser(String browserName) {
-		try {
-			switch (browserName) {
-			case "chromebrowser":
-				poolDriver.set(new ChromeDriver());
-				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
-				break;
-			case "firebrowser":
-				poolDriver.set(new FirefoxDriver());
-				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
-				break;
-			case "edgebrowser":
-				poolDriver.set(new EdgeDriver());
-				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
-				break;
-			case "safaribrowser":
-				poolDriver.set(new SafariDriver());
-				getExtentTest().log(Status.INFO, browserName + ": launched succesfully");
 
+		try {
+
+			switch (browserName.toLowerCase()) {
+
+			case "chromebrowser":
+				driver = new ChromeDriver();
+				break;
+
+			case "firebrowser":
+				driver = new FirefoxDriver();
+				break;
+
+			case "edgebrowser":
+				driver = new EdgeDriver();
+				break;
+
+			case "safaribrowser":
+				driver = new SafariDriver();
+				break;
+
+			default:
+				throw new RuntimeException("Invalid Browser Name");
 			}
+
+//			setDriver(driver); // 🔥 VERY IMPORTANT
+			getExtentTest().log(Status.INFO, browserName + " launched successfully");
+
 		} catch (Exception e) {
-			getExtentTest().log(Status.FAIL, "Failed To Launched Browser");
+
+			getExtentTest().log(Status.FAIL, "Failed to launch browser");
 			throw e;
 		}
-
 	}
 
 	/*
@@ -176,14 +221,23 @@ public class WebUtil {
 	 * 
 	 * 
 	 */
+//	public void openUrl(String url) {
+//		try {
+//			driver.get(url);
+//			getExtentTest().log(Status.INFO, url + ": launched succesfully");
+//		} catch (Exception e) {
+//			getExtentTest().log(Status.FAIL, "Did not launch : " + url);
+//			throw e;
+//		}
+//	}
 	public void openUrl(String url) {
-		try {
-			getDriver().get(url);
-			getExtentTest().log(Status.INFO, url + ": launched succesfully");
-		} catch (Exception e) {
-			getExtentTest().log(Status.FAIL, "Did not launch : " + url);
-			throw e;
+
+		if (driver == null) {
+			throw new IllegalStateException("Driver not initialized.");
 		}
+
+		driver.get(url);
+		getExtentTest().log(Status.INFO, "URL opened: " + url);
 	}
 
 	/*
@@ -308,7 +362,7 @@ public class WebUtil {
 	 */
 
 	public Object executeScript(String jsCode, WebElement element) {
-		JavascriptExecutor exc = (JavascriptExecutor) getDriver();
+		JavascriptExecutor exc = (JavascriptExecutor) driver;
 		Object obj = exc.executeScript(jsCode, element);
 		return obj;
 	}
@@ -671,7 +725,13 @@ public class WebUtil {
 	 */
 
 	public void closeWindow() {
-		driver.close();
+		try {
+			driver.close();
+			getExtentTest().log(Status.INFO, "Window closed successfully");
+		} catch (Exception e) {
+			getExtentTest().log(Status.FAIL, "Failed to close window");
+			throw e;
+		}
 	}
 
 	/*
@@ -692,7 +752,7 @@ public class WebUtil {
 			e.printStackTrace();
 		}
 
-		getDriver().quit();
+		driver.quit();
 //		removeTL();
 	}
 	/*
@@ -885,16 +945,43 @@ public class WebUtil {
 	 * 
 	 * @return: no return type
 	 */
+//	public void maxWindow() {
+//		try {
+//			driver.manage().window().maximize();
+//			getExtentTest().log(Status.INFO, "Window maximized Succesfully");
+//		} catch (IllegalArgumentException e) {
+//			getExtentTest().log(Status.FAIL, "Please set driver");
+//		} catch (Exception e) {
+//			getExtentTest().log(Status.FAIL, "Did not maximize window");
+//			throw e;
+//		}
+//	}
+//	public void maxWindow() {
+//
+//		if (driver == null) {
+//
+//			throw new IllegalStateException("Driver not initialized. Launch browser first.");
+//		}
+//
+//		try {
+//
+//			driver.manage().window().maximize();
+//			getExtentTest().log(Status.INFO, "Window maximized successfully");
+//
+//		} catch (Exception e) {
+//
+//			getExtentTest().log(Status.FAIL, "Did not maximize window");
+//			throw e;
+//		}
+//	}
 	public void maxWindow() {
-		try {
-			poolDriver.get().manage().window().maximize();
-			getExtentTest().log(Status.INFO, "Window maximized Succesfully");
-		} catch (IllegalArgumentException e) {
-			getExtentTest().log(Status.FAIL, "Please set driver");
-		} catch (Exception e) {
-			getExtentTest().log(Status.FAIL, "Did not maximize window");
-			throw e;
+
+		if (driver == null) {
+			throw new IllegalStateException("Driver not initialized. Launch browser first.");
 		}
+
+		driver.manage().window().maximize();
+		getExtentTest().log(Status.INFO, "Window maximized Successfully");
 	}
 
 	/*
@@ -904,32 +991,32 @@ public class WebUtil {
 	 * 
 	 * @ return: no return type
 	 */
-	public void getWindowHandldes(String expectedWinTitle) {
-		try {
-			Set<String> listWind = driver.getWindowHandles();
-			for (String singleWindow : listWind) {
-				driver.switchTo().window(singleWindow);
-				String actualWinTitle = driver.getTitle();
-				if (actualWinTitle.equals(expectedWinTitle)) {
-					break;
-				}
-			}
-		} catch (NoSuchWindowException e) {
-			Set<String> listWind = driver.getWindowHandles();
-			for (String singleWindow : listWind) {
-				driver.switchTo().window(singleWindow);
-				String actualWinTitle = driver.getTitle();
-				if (actualWinTitle.equals(expectedWinTitle)) {
-					getExtentTest().log(Status.PASS,
-							" [ " + actualWinTitle + " ] matched with [ " + expectedWinTitle + " ]");
-					break;
-				}
-			}
-		} catch (Exception e) {
-			getExtentTest().log(Status.FAIL, "Did not find windowes");
-			throw e;
-		}
-	}
+//	public void getWindowHandldes(String expectedWinTitle) {
+//		try {
+//			Set<String> listWind = driver.getWindowHandles();
+//			for (String singleWindow : listWind) {
+//				driver.switchTo().window(singleWindow);
+//				String actualWinTitle = driver.getTitle();
+//				if (actualWinTitle.equals(expectedWinTitle)) {
+//					break;
+//				}
+//			}
+//		} catch (NoSuchWindowException e) {
+//			Set<String> listWind = driver.getWindowHandles();
+//			for (String singleWindow : listWind) {
+//				driver.switchTo().window(singleWindow);
+//				String actualWinTitle = driver.getTitle();
+//				if (actualWinTitle.equals(expectedWinTitle)) {
+//					getExtentTest().log(Status.PASS,
+//							" [ " + actualWinTitle + " ] matched with [ " + expectedWinTitle + " ]");
+//					break;
+//				}
+//			}
+//		} catch (Exception e) {
+//			getExtentTest().log(Status.FAIL, "Did not find windowes");
+//			throw e;
+//		}
+//	}
 
 	/*
 	 * By this method we can send input in any specific text box and to send value
@@ -1189,7 +1276,7 @@ public class WebUtil {
 	 * @return: Actions
 	 */
 	public void moveToElement(WebElement web, String elementName) {
-		actObj = new Actions(getDriver());
+		actObj = new Actions(driver);
 
 		try {
 			actObj.moveToElement(web).build().perform();
@@ -1907,7 +1994,7 @@ public class WebUtil {
 	public void verifyTitle(WebElement web, String expectedTitle, String elementName) {
 
 		try {
-			String actTitle = getDriver().getTitle();
+			String actTitle = driver.getTitle();
 			if (actTitle.equals(expectedTitle)) {
 				logPass(actTitle, expectedTitle, elementName);
 			} else {
@@ -1999,16 +2086,25 @@ public class WebUtil {
 	 * 
 	 * @return: boolean
 	 */
-	public void verifyDisplayed(WebElement web, boolean expection, String elementName) {
+	public void verifyDisplayed(WebElement web, boolean expectation, String elementName) {
+
 		try {
-			boolean blDisplayedStatus = web.isDisplayed();
-			if (blDisplayedStatus == expection) {
-				logPass(elementName, elementName, elementName);
+
+			boolean actualStatus = web.isDisplayed();
+
+			if (actualStatus == expectation) {
+
+				logPass(actualStatus, expectation, elementName);
+
 			} else {
-				logFail(blDisplayedStatus, expection, elementName);
+
+				logFail(actualStatus, expectation, elementName);
 			}
+
 		} catch (Exception e) {
+
 			getExtentTest().log(Status.FAIL, "Unable to validate by verifyDisplayed method");
+
 			getSnapShote(elementName);
 			throw e;
 		}
@@ -2063,6 +2159,103 @@ public class WebUtil {
 			getSnapShote(elementName);
 			throw e;
 		}
+	}
+	// ================= WINDOW HANDLING METHODS ===================
+
+//	public boolean switchToNewWindow(String elementName) {
+//
+//		String parentWindow = driver.getWindowHandle();
+//
+//		try {
+//
+//			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+//			wait.until(driver -> driver.getWindowHandles().size() > 1);
+//
+//			Set<String> windows = driver.getWindowHandles();
+//
+//			for (String window : windows) {
+//
+//				if (!window.equals(parentWindow)) {
+//
+//					driver.switchTo().window(window);
+//					getExtentTest().log(Status.INFO, "Switched to new window successfully of - [" + elementName + "]");
+//					return true;
+//				}
+//			}
+//
+//		} catch (TimeoutException e) {
+//
+//			getExtentTest().log(Status.FAIL, "New window did not open within time of - [" + elementName + "]");
+//
+//		} catch (Exception e) {
+//
+//			getExtentTest().log(Status.FAIL, "Error while switching to new window of - [" + elementName + "]");
+//			throw e;
+//		}
+//
+//		return false;
+//	}
+//
+	public void switchToNewWindow(String expectedValue) {
+
+		for (String handle : driver.getWindowHandles()) {
+
+			driver.switchTo().window(handle);
+
+			if (driver.getTitle().contains(expectedValue) || driver.getCurrentUrl().contains(expectedValue)) {
+
+				return;
+			}
+		}
+
+		throw new RuntimeException("Window not found: " + expectedValue);
+	}
+
+	public boolean switchToParentWindow(String parentWindow, String elementName) {
+
+		try {
+
+			driver.switchTo().window(parentWindow);
+
+			getExtentTest().log(Status.INFO, "Switched back to parent window of - [" + elementName + "]");
+			return true;
+
+		} catch (Exception e) {
+
+			getExtentTest().log(Status.FAIL, "Failed to switch back to parent window");
+			throw e;
+		}
+	}
+
+	public boolean switchWindowByTitle(String expectedTitle, String elementName) {
+
+		try {
+
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(1));
+			wait.until(driver -> driver.getWindowHandles().size() > 1);
+
+			Set<String> windows = driver.getWindowHandles();
+
+			for (String win : windows) {
+
+				driver.switchTo().window(win);
+
+				if (driver.getTitle().equals(expectedTitle)) {
+
+					getExtentTest().log(Status.PASS, "Window title matched: " + expectedTitle);
+					return true;
+				}
+			}
+
+			getExtentTest().log(Status.FAIL, "Window with title not found: " + expectedTitle);
+
+		} catch (Exception e) {
+
+			getExtentTest().log(Status.FAIL, "Exception while switching window by title");
+			throw e;
+		}
+
+		return false;
 	}
 
 }

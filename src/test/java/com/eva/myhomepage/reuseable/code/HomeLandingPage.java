@@ -3,7 +3,7 @@ package com.eva.myhomepage.reuseable.code;
 import com.eva.webutil.WebUtil;
 
 public class HomeLandingPage extends HomeLandingOR {
-	private WebUtil util =WebUtil.getInstance();
+	private WebUtil util ;
 
 	public HomeLandingPage(WebUtil util) {
 		super(util);
